@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Developed By Eng: Mohamed Reda" />
+  <meta name="description"
+    content="RXAI - A smart platform for finding medication alternatives and details, designed to assist healthcare professionals and patients." />
+  <meta name="keywords" content="RXAI, Medicine Finder, Active Ingredients, Medical Alternatives, Drug Information" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#007BFF" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="RXAI - Find Medication Alternatives Easily" />
+  <meta property="og:description"
+    content="Discover the best medication options and alternatives with RXAI, your AI-powered drug assistant." />
+  <meta property="og:image" content="./Images/social-image.png" />
+  <meta property="og:url" content="https://yourwebsite.com" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RXAI - Find Medication Alternatives Easily" />
+  <meta name="twitter:description"
+    content="Discover the best medication options and alternatives with RXAI, your AI-powered drug assistant." />
+  <meta name="twitter:image" content="./Images/social-image.png" />
+  <title>RXAI</title>
+  <link rel="shortcut icon" href="./Images/I_logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="home">
+  <div class="Home">
+    <div class="background-pattern"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+    <div class="logo">
+      <img src="./Images/I_logo.ico" alt="logo" class="logoimg" />
+      <img src="./Images/LogoName.png" alt="Logo Name" class="logoname" />
+    </div>
+    <div class="container">
+      <h1>Welcome to the Chemical Treatment Search Website</h1>
+      <p class="subtitle">
+        Discover the Best Available Medicines Quickly and Easily
+      </p>
+      <button onclick="navigate()" class="get-started-btn">
+        GET STARTED
+      </button>
+      <p class="description">
+        We are here to help you find the best available medicines based on
+        your personal needs. With our search engine, you can easily find the
+        right medicines and access full details like active ingredients,
+        price, and priority score.
+      </p>
+    </div>
+  </div>
+
+  <div class="Sec" style="display: none">
+    <section class="main-section">
+      <div class="input">
+        <header>
+          <div class="logo">
+            <img src="./Images/I_logo.ico" alt="logo" class="logoimg" />
+            <img src="./Images/LogoName.png" alt="Logo Name" class="logoname" />
+          </div>
+        </header>
+
+        <form id="medicineForm">
+          <div class="ingredient">
+            <label for="ingredient">Active Ingredient</label>
+            <input type="text" name="ingredient" id="ingredient" placeholder="Type to search active ingredients..."
+              autocomplete="off" />
+            <span id="ingredientError" class="error-message"></span>
+          </div>
+          <div class="form">
+            <label for="form">Form</label>
+            <input type="text" id="form" name="form" placeholder="Search for Pharmaceutical Form..."
+              autocomplete="off" />
+          </div>
+          <div class="strength">
+            <label for="strength">Strength</label>
+            <input type="text" id="strength" name="strength" placeholder="0-1000" autocomplete="off" />
+            <span id="strengthError" class="error-message"></span>
+          </div>
+          <button type="submit" id="submitButton">Submit</button>
+        </form>
+      </div>
+      <div class="output">
+        <div class="available-treatments">
+          <h4>Available Treatments</h4>
+          <!-- Available treatments will be populated here dynamically -->
+        </div>
+      </div>
+    </section>
+    <div id="detailsModal" class="modal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">×</button>
+        <div class="modal-field">
+          <label class="modal-label" for="tradeName">Trade Name</label>
+          <input type="text" class="modal-input" id="tradeName" readonly />
+        </div>
+        <div class="modal-field">
+          <label class="modal-label" for="modalActiveIngredient">Active Ingredient</label>
+          <input type="text" class="modal-input" id="modalActiveIngredient" readonly />
+        </div>
+        <div class="modal-field">
+          <label class="modal-label" for="modalStrength">Strength</label>
+          <input type="text" class="modal-input" id="modalStrength" readonly />
+        </div>
+        <div class="modal-field">
+          <label class="modal-label" for="pharmaceuticalForm">Pharmaceutical Form</label>
+          <input type="text" class="modal-input" id="pharmaceuticalForm" readonly />
+        </div>
+        <div class="modal-field">
+          <label class="modal-label" for="Indication">Indication</label>
+          <input type="text" class="modal-input" id="Indication" readonly />
+        </div>
+        <div class="modal-field">
+          <label class="modal-label" for="price">Price (EGP)</label>
+          <input type="text" class="modal-input" id="price" readonly />
+        </div>
+        <div class="modal-field">
+          <label class="modal-label" for="priority">Priority</label>
+          <input type="text" class="modal-input" id="priority" readonly />
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
